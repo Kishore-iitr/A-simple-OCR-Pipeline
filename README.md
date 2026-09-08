@@ -1,12 +1,5 @@
 # OCR Framework Shootout
 
-Runs the same test images through four different text-extraction approaches
-and scores each one, so the numbers — not folklore — decide which is worth
-building on.
-
-**Open `OCR_Framework_Comparison.ipynb`** — every cell is commented, and it's
-already been executed once so you can read the results without running
-anything.
 
 ## What's compared
 
@@ -50,13 +43,6 @@ Two reference points are used, because most real projects only have one of them:
 | Handwriting (neat cursive) | 86.7% | 53.3% |
 | Handwriting (messy) | 26.7% | 14.8% |
 
-**TrOCR and the VLM call did not run in this dev sandbox** — TrOCR needs to
-download weights from `huggingface.co` and the VLM call needs
-`openrouter.ai`, and this environment's network allow-list blocks both. Both
-sections contain complete, correct code with graceful error handling; run
-the notebook anywhere with open internet (and an `OPENROUTER_API_KEY` for
-the VLM section) and both will populate real results automatically — no
-code changes needed.
 
 ## Bottom line
 
@@ -74,33 +60,5 @@ code changes needed.
   tends to be the most robust to real-world image quality issues. Costs
   money per call and needs internet.
 
-**If handwriting matters:** TrOCR (free, local, more engineering) or the VLM
-route (paid, minimal engineering). **If you're only dealing with clean
-printed text at scale:** EasyOCR or a properly preprocessed Tesseract
-pipeline are both solid, free options.
 
-## Setup
 
-```bash
-pip install -r requirements.txt
-
-# Tesseract is a separate system binary:
-sudo apt-get install tesseract-ocr      # Ubuntu/Debian
-brew install tesseract                  # macOS
-
-# For the VLM section:
-export OPENROUTER_API_KEY=sk-or-...     # from https://openrouter.ai/keys
-```
-
-## Files
-
-```
-.
-├── OCR_Framework_Comparison.ipynb   # main deliverable — run this
-├── sample_images/
-│   ├── noisy_document.png
-│   ├── handwriting_cursive.png
-│   └── handwriting_dkg.png
-├── requirements.txt
-└── README.md
-```
