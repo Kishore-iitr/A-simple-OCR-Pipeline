@@ -37,12 +37,11 @@ Two reference points are used, because most real projects only have one of them:
 
 ## Results (measured in this repo's dev environment)
 
-| Image | Tesseract | EasyOCR |
-|---|---|---|
-| Printed invoice (degraded) | 78.8% | 51.4% |
-| Handwriting (neat cursive) | 86.7% | 53.3% |
-| Handwriting (messy) | 26.7% | 14.8% |
-
+|Framework|handwriting\_cursive\.png|handwriting\_dkg\.png|noisy\_document\.png|
+|---|---|---|---|
+|EasyOCR|53\.3%|14\.8%|46\.6%|
+|Tesseract|53\.3%|53\.3%|93\.9%|
+|VLM |100\.0%|100\.0%|100\.0%|
 
 ## Bottom line
 
