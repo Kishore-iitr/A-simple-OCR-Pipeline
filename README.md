@@ -7,7 +7,7 @@
 |---|--------|------|
 | 1 | **Tesseract** (`pytesseract`) | Classical pipeline + LSTM recognizer |
 | 2 | **EasyOCR** | Deep learning: CRAFT detector + CRNN recognizer |
-| 3 | **TrOCR** (Microsoft) | Pure Transformer (ViT encoder + text decoder), separate checkpoints for printed vs. handwritten text |
+| 3 | **TrOCR** (Microsoft) | Pure Transformer (ViT encoder + text decoder), separate checkpoints for printed vs. handwritten text | (not included currently)
 | 4 | **A vision-language model**, via OpenRouter | General-purpose multimodal LLM, not a dedicated OCR model at all |
 
 ## Test images
@@ -35,7 +35,7 @@ Two reference points are used, because most real projects only have one of them:
    strong general-purpose model's transcription as a pseudo-reference, and
    measure how closely a cheaper/faster/local tool tracks it.
 
-## Results (measured in this repo's dev environment)
+## Results 
 
 |Framework|handwriting\_cursive\.png|handwriting\_dkg\.png|noisy\_document\.png|
 |---|---|---|---|
