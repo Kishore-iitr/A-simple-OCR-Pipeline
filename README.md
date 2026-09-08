@@ -56,8 +56,7 @@ character-level exact matching.
 | Neat handwriting           | **86.7%** |   53.3% | 100% |
 | Messy handwriting          | **26.7%** |   14.8% | 100% |
 
-The VLM section is included in the notebook but requires an
-`OPENROUTER_API_KEY` and internet access to run.
+
 
 ## Bottom Line
 
